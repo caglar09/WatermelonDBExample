@@ -18,10 +18,8 @@ const TodoList = ({ todos }) => {
 			<Text style={styles.header}>Todos - {todos.length}</Text>
 			<ScrollView>
 				{todos.map((todo) => (
-					<View style={styles.itemContainer}>
-						<Text key={todo.id} style={styles.item}>
-							{todo.text}
-						</Text>
+					<View key={todo.id} style={styles.itemContainer}>
+						<Text style={styles.item}>{todo.text}</Text>
 						<TouchableOpacity onPress={() => todo.removeTodo()}>
 							<Text style={styles.deleteText}>Sil</Text>
 						</TouchableOpacity>
